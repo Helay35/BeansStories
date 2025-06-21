@@ -1,0 +1,108 @@
+/* home.css - dedicated only to home.html */
+
+/* General Page Setup */
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background: #f3ebe0 url('https://www.transparenttextures.com/patterns/coffee-beans.png') repeat;
+  color: #4b3b2b;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #6f4e37;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list a {
+  color: #f3ebe0;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-list a:hover,
+.nav-list a.active {
+  color: #d4b98f;
+}
+
+/* Main Content */
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.main-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #6f4e37;
+}
+
+.quote {
+  font-family: 'Dancing Script', cursive;
+  font-style: italic;
+  font-size: 1.8rem;
+  color: #8b6d5c;
+  margin-bottom: 2rem;
+}
+
+.intro {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #5a4632;
+  padding: 0 1rem;
+  max-width: 700px;
+}
+
+/* Footer */
+.footer {
+  background-color: #6f4e37;
+  color: #f3ebe0;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-top: auto;
+}
+
+/* Optional: Responsive */
+@media (max-width: 600px) {
+  .main-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .quote {
+    font-size: 1.4rem;
+  }
+
+  .intro {
+    font-size: 1.05rem;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

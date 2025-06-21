@@ -1,0 +1,110 @@
+/* General Layout */
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background: #f3ebe0 url('https://www.transparenttextures.com/patterns/coffee-beans.png') repeat;
+  color: #4b3b2b;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #6f4e37;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list a {
+  color: #f3ebe0;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-list a:hover,
+.nav-list a.active {
+  color: #d4b98f;
+}
+
+/* Coffee Container */
+.coffee-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Coffee Card */
+.coffee-card {
+  background-color: #fff8f0;
+  border-radius: 16px;
+  overflow: hidden;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  /* 🔥 Animation on load */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+  animation-delay: calc(var(--order) * 0.1s);
+}
+
+/* 🔥 Hover zoom effect */
+.coffee-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Coffee Image */
+.coffee-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+/* Title & Description */
+.coffee-card h3 {
+  margin: 0.5rem 0;
+  font-size: 1.4rem;
+  color: #4b3b2b;
+}
+
+.coffee-card p {
+  font-size: 1rem;
+  color: #6d4c3d;
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer */
+.footer {
+  background-color: #6f4e37;
+  color: #f3ebe0;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  font-style: italic;
+}
